@@ -60,6 +60,6 @@ print(type(b))'''
 # i am
 # here""")
 
-item=input("enter an item : ")
-price=int(input("enter the price : "))
-print(f"its a {item}, and its price is {price} rs")
+# item=input("enter an item : ")
+# price=int(input("enter the price : "))
+# print(f"its a {item}, and its price is {price} rs")
