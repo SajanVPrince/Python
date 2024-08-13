@@ -85,5 +85,50 @@ else:
     print("Invalid Number")'''
 
 
-# task 4
+# Task 4
 
+
+'''a=input("enter your city : ")
+a=a.lower()
+print(a)
+
+if a=='delhi':
+    print("monuments is : 'Redfort'")
+elif a=="agra":
+    print("monuments is : 'Taj Mahal'")
+elif a=="jaipur":
+    print("monuments is : 'jal mahal'")
+else:
+    print("Invalid")'''
+
+# Task 5
+
+a=int(input("enter a number : "))
+a=a%10
+b=a%3
+if a==0:
+    print("the entered number is not divisible by 3")
+elif b==0:
+    print("the entered number is divisible by 3")
+else:
+    print("the number is not divisible by 3")
+
+# Task 6
+
+'''a=int(input("enter the price : "))
+
+if a>100000:
+    b=a*15/100
+    total=a+b
+    print(f"Ex- Showroom Price = {a} and tax amount is ={b}")
+    print("Total Amount is = ",total)
+elif a>50000 and a<=100000:
+    b=a*10/100
+    total=a+b
+    print(f"Ex- Showroom Price = {a}and tax amount is ={b}")
+    print("Total Amount is = ",total)
+else:
+    b=a*5/100
+    total=a+b
+    print(f"Ex- Showroom Price = {a}and tax amount is ={b}")
+    print("Total Amount is = ",total)'''
