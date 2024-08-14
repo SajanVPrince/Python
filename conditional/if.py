@@ -103,7 +103,7 @@ else:
 
 # Task 5
 
-a=int(input("enter a number : "))
+'''a=int(input("enter a number : "))
 a=a%10
 b=a%3
 if a==0:
@@ -111,7 +111,7 @@ if a==0:
 elif b==0:
     print("the entered number is divisible by 3")
 else:
-    print("the number is not divisible by 3")
+    print("the number is not divisible by 3")'''
 
 # Task 6
 
@@ -132,3 +132,17 @@ else:
     total=a+b
     print(f"Ex- Showroom Price = {a}and tax amount is ={b}")
     print("Total Amount is = ",total)'''
+
+# Task 7
+
+'''word=input("Enter a word : ")
+word=word.lower()
+print(word)
+letr=input("Enter a letter to find : ")
+letr=letr.lower()
+print(letr)
+
+if letr in word:
+    print("entered letter is availible")
+else:
+    print("unavilible")'''
