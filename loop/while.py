@@ -52,11 +52,58 @@ print("Sum of numbers :",e)'''
 
 # task 5(multiplication table)
 
-a=int(input("enter a number : "))
+'''a=int(input("enter a number : "))
 i=1
 while i<=10:
     b=a*i
     print(f"{a}*{i}={b}")
-    i+=1
-    
+    i+=1'''
+
+# task 6 (itrative)
+
+'''a='python'
+i=0
+l=len(a)
+while i<l:
+    print(a[0])
+    i+=1'''
+
+# task 7 (reverse )
+
+'''a='sajan'
+i=0
+l=len(a)
+b=a[::-1]
+while i<l:
+    print(b[i])
+    i+=1'''
+
+# task 7(reverse a number)
+
+'''a
+=int(input("Enter a number : "))
+rev=0
+while a>0:
+    d=a%10
+    print(d)
+    rev=rev*10+d
+    print(rev)
+    a//=10
+    print(a)
+print('rev',rev)'''
+
+# task 7 (fibonacci)
+
+'''a=int(input("enter a number : "))
+b=0
+c=1
+i=0
+while i<a:
+    print(b)
+    d=b+c
+    b=c
+    c=d
+    i+=1'''
+
+
 
