@@ -42,6 +42,10 @@ for i in range(4):
         else:
             print(2-j,end=' ')
     print()'''
+
+# task 4
+#  0
+# 0 1 2
     
 
       
