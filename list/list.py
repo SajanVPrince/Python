@@ -93,3 +93,86 @@ for i in l:
     if l.count(i)>=2:
         l.remove(i)
 print(l)'''
+
+# task 1
+
+'''l=['apple','malayalam','amma','python']
+for i in l:
+    rev=i[::-1]
+    if rev==i:
+        print(rev,'its a palindrome')
+    else:
+        print(rev,'its not a palindrome')'''
+    
+# task 2
+
+'''l=[1,3,2,7,6,9]
+for i in l:
+    if i%3==0:
+        print(i,'is divisibe by 3')
+    else:
+        print(i,'not divisible by 3')'''
+
+# task 3
+
+# while True:
+#     print('''
+#         1.add
+#         2.sub
+#         3.mul
+#         4.div
+#         5.exit''')
+    
+'''c=int(input('enter the function you need : '))
+    if c==1:
+        a=int(input('enter the first number : '))
+        b=int(input('enter the second number : '))
+        d=a+b
+        print(f"{a}+{b}={d}")
+    elif c==2:
+        a=int(input('enter the first number : '))
+        b=int(input('enter the second number : '))
+        d=a-b
+        print(f"{a}-{b}={d}")
+    elif c==3:
+        a=int(input('enter the first number : '))
+        b=int(input('enter the second number : '))
+        d=a*b
+        print(f"{a}*{b}={d}")
+    elif c==4:
+        a=int(input('enter the first number : '))
+        b=int(input('enter the second number : '))
+        d=a/b
+        print(f"{a}/{b}={d}")
+    elif c==5:
+        break
+    else:
+        print('enter a valid number')'''
+
+# task 4
+
+std=[]
+while True:
+    print('''
+          1.add Student
+          2.view student
+          3.update student
+          4.delete student
+          5.exit''')
+    
+    c=int(input('enter the choice'))
+    if c==1:
+        name=(input("enter the name : "))
+        age=int(input("enter the age : "))
+        mark=int(input("enter the mark : "))
+        std.append([name,age,mark])
+
+    elif c==2:
+        for i in std:
+            print(i)
+    
+    # elif c==3:
+
+
+
+
