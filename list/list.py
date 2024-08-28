@@ -151,18 +151,18 @@ for i in l:
 
 # task 4
 
-std=[]
-while True:
-    print('''
-          1.add Student
-          2.view student
-          3.update student
-          4.delete student
-          5.exit''')
+# std=[]
+# while True:
+#     print('''
+#           1.add Student
+#           2.view student
+#           3.update student
+#           4.delete student
+#           5.exit''')
     
-    c=int(input('enter the choice'))
+'''c=int(input('enter the choice : '))
     if c==1:
-        name=(input("enter the name : "))
+        name=str(input("enter the name : "))
         age=int(input("enter the age : "))
         mark=int(input("enter the mark : "))
         std.append([name,age,mark])
@@ -171,8 +171,115 @@ while True:
         for i in std:
             print(i)
     
-    # elif c==3:
+    elif c==3:
+        name=str(input("enter the name : "))
+        f=0
+        for i in std:
+            if name in i:
+                mark=int(input('enter the mark : '))
+                i[2]=mark
+                f=1
+        if f==0:
+            print('invalid number...')
+    elif c==4:
+        name=str(input("enter the name : "))
+        f=0
+        for i in std:
+            if name in i:
+                std.remove(i)
+                f=1
+        if f==0:
+            print('invalid number...')
+    elif c==5:
+        break
+else:
+    print('invalid choice')'''
 
+# task Employee
 
+emp=[]
+id=1000
+while True:
+    print('''
+    1.Register as new
+    2.View employee
+    3.Update the details
+    4.Delete the details
+    5.Assign Work
+    6.Search an employee
+    7.Exit''')
 
+    c=int(input('Enter your Choice : '))
+    if c==1:
+        print('Register here...')
+        name=str(input('Enter your name : '))
+        id+=1
+        empid=id
+        age=int(input('Enter your age : '))
+        place=str(input('Enter your place : '))
+        salary=int(input('Enter Your Salary : '))
+        position=str(input('Enter your position : '))
+        exp=str(input('Enter your experience : '))
+        emp.append([name,id,age,place,salary,position,exp])
+    elif c==2:
+        print('Our Employess')
+        for i in emp:
+            print(i)
+    elif c==3:
+        print('Update the details')
+        name=str(input("enter the name : "))
+        if name not in emp:
+            print('not Availible')
+        else:    
+            for i in emp:
+                if name in i:
+                    print(i)
+            print('select an id to update..')
+            empid=int(input('enter the id : '))
+            # f=0
+            while True:
+                print('Select the item to be updated')
+                print('''
+                    1.salary
+                    2.position
+                    3.exp
+                    4.exit''')
+        
+                u=int(input('enter your choice : '))
+                if u==1:
+                    salary=int(input('enter your new salary : '))
+                    i[4]=salary
+                    f=1
+                elif u==2:
+                    position=int(input('enter your new position: '))
+                    i[5]=position
+                    f=1
+                elif u==3:
+                    exp=int(input('enter your new exp: '))
+                    i[6]=exp
+                    f=1
+                elif u==4:
+                    break
+                else:
+                    print('invalid choice')
+            # if f==0:
+            #     print('invalid id')
+    elif c==4:
+        print('Delete the data')
+        name=str(input("enter the name : "))
+        if name not in emp:
+            print('not Availible')
+        else:
+            for i in emp:
+                if name in i:
+                    print(i)
+            print('select an id to delete..')
+            empid=int(input('enter the id : '))
+            if empid in i:
+                emp.remove(i)
+                    
 
+    
+                
+            
+           
