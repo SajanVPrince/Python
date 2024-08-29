@@ -199,17 +199,19 @@ else:
 
 emp=[]
 id=1000
+import datetime
 while True:
     print('''
     1.Register as new
     2.View employee
     3.Update the details
     4.Delete the details
-    5.Assign Work
-    6.Search an employee
+    5.Search an employee
+    6.Assign Work
     7.Exit''')
 
     c=int(input('Enter your Choice : '))
+
     if c==1:
         print('Register here...')
         name=str(input('Enter your name : '))
@@ -221,22 +223,25 @@ while True:
         position=str(input('Enter your position : '))
         exp=str(input('Enter your experience : '))
         emp.append([name,id,age,place,salary,position,exp])
+
     elif c==2:
         print('Our Employess')
         for i in emp:
             print(i)
+
     elif c==3:
-        print('Update the details')
-        name=str(input("enter the name : "))
-        if name not in emp:
-            print('not Availible')
-        else:    
-            for i in emp:
-                if name in i:
-                    print(i)
-            print('select an id to update..')
+        # print('Update the details')
+        # name=str(input("enter the name : "))
+        # if name not in emp:
+        #     print('not Availible')
+        # else:    
+        #     for i in emp:
+        #         if name in i:
+        #             print(i)
+        # print('select an id to update..')
+        for i in emp:
             empid=int(input('enter the id : '))
-            # f=0
+            f=0
             while True:
                 print('Select the item to be updated')
                 print('''
@@ -262,21 +267,63 @@ while True:
                     break
                 else:
                     print('invalid choice')
-            # if f==0:
-            #     print('invalid id')
+            if f==0:
+                print('invalid id')
+
     elif c==4:
-        print('Delete the data')
-        name=str(input("enter the name : "))
-        if name not in emp:
-            print('not Availible')
-        else:
-            for i in emp:
-                if name in i:
-                    print(i)
-            print('select an id to delete..')
+        # print('Delete the data')
+        # name=str(input("enter the name : "))
+        # # f=0
+        # if name not in emp:
+        #     print('not Availible')
+        # else:
+            
+            # for i in emp:
+            #     if name in i:
+            #         print(i)
+            # print('select an id to delete..')
+        for i in emp:
             empid=int(input('enter the id : '))
+            f=0
             if empid in i:
                 emp.remove(i)
+                f=1
+            if f==0:
+                print('invalid number...')
+
+    elif c==5:
+        # print('search an employee')
+        # name=str(input("enter the name : "))
+        # if name not in emp:
+        #     print('not Availible')
+        # else:
+        #     for i in emp:
+        #         if name in i:
+        #             print(i)
+        #     print('select an id..')
+        for i in emp:
+            empid=int(input('enter the id : '))
+            if empid in i:
+                print('Employee ID : ',emp[1])
+                print('Name : ',emp[0])
+                print('Age : ',emp[2])
+                print('Place : ',emp[3])
+                print('Position : ',emp[5])
+                print('Experience: ',emp[6])
+    elif c==6:
+        while True:
+            print('Assign work..')
+            id=int(input('enter an id : '))
+            for i in emp:
+                if id in i:
+                    task=input('Enter the name of task : ')
+                    date=datetime.datetime.now().strftime('%x')
+                    i.append([task,date])
+            print(emp)
+    elif c==7:
+        break
+    else:
+        print('invalid option')
                     
 
     
