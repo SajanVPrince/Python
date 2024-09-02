@@ -230,15 +230,15 @@ while True:
             print(i)
 
     elif c==3:
-        # print('Update the details')
-        # name=str(input("enter the name : "))
-        # if name not in emp:
-        #     print('not Availible')
-        # else:    
-        #     for i in emp:
-        #         if name in i:
-        #             print(i)
-        # print('select an id to update..')
+        print('Update the details')
+        name=str(input("enter the name : "))
+        if name not in emp:
+            print('not Availible')
+        else:    
+            for i in emp:
+                if name in i:
+                    print(i)
+        print('select an id to update..')
         for i in emp:
             empid=int(input('enter the id : '))
             f=0
@@ -271,17 +271,17 @@ while True:
                 print('invalid id')
 
     elif c==4:
-        # print('Delete the data')
-        # name=str(input("enter the name : "))
-        # # f=0
-        # if name not in emp:
-        #     print('not Availible')
-        # else:
+        print('Delete the data')
+        name=str(input("enter the name : "))
+        # f=0
+        if name not in emp:
+            print('not Availible')
+        else:
             
-            # for i in emp:
-            #     if name in i:
-            #         print(i)
-            # print('select an id to delete..')
+            for i in emp:
+                if name in i:
+                    print(i)
+            print('select an id to delete..')
         for i in emp:
             empid=int(input('enter the id : '))
             f=0
@@ -292,15 +292,15 @@ while True:
                 print('invalid number...')
 
     elif c==5:
-        # print('search an employee')
-        # name=str(input("enter the name : "))
-        # if name not in emp:
-        #     print('not Availible')
-        # else:
-        #     for i in emp:
-        #         if name in i:
-        #             print(i)
-        #     print('select an id..')
+        print('search an employee')
+        name=str(input("enter the name : "))
+        if name not in emp:
+            print('not Availible')
+        else:
+            for i in emp:
+                if name in i:
+                    print(i)
+            print('select an id..')
         for i in emp:
             empid=int(input('enter the id : '))
             if empid in i:

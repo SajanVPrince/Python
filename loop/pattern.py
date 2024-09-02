@@ -45,8 +45,46 @@ for i in range(4):
 
 # task 4
 #  0
-# 0 1 2
-    
+#  0 1
+#  0 1 2
 
-      
+'''for i in range(1,4):
+    for j in range(i):
+        print(j,end=' ')
+    print()'''
+
+# task 5
+#  0
+#  1 2
+#  3 4 5
+
+'''a=0
+for i in range(1,4):
+    for j in range(i):
+        print(a,end=' ')
+        a+=1
+    print()'''
+
+# task 6
+#  0
+#  1 1
+#  2 2 2
+
+'''l=0
+for i in range(1,4):
+    for j in range(i):
+        print(i-l,end=' ')
+    print()'''
+
+# task 7
+#  0
+#  1 0
+#  2 1 0
+
+'''l=0
+for i in range(1,4):
+    for j in range(i):
+        print(l-j,end=' ')
+    l+=1
+    print()'''
 
