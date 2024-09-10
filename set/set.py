@@ -51,7 +51,7 @@ print(s)'''
 
 # TASK 2
 
-php=set()
+'''php=set()
 a=int(input('enter the limit : '))
 for i in range(a):
     b=str(input('enter the name : '))
@@ -72,3 +72,6 @@ for i in range(a):
 print('php = ',php)
 print('python = ',python)
 print('java = ',java)
+
+find common
+find odd one'''
