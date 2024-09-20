@@ -83,6 +83,20 @@ def view_usr():
     for i in user:
         print("{:<10}{:<15}{:<15}{:<15}".format(i['id'],i['name'],i['email'],i['phone']))
 
+def update_usr():
+    id=int(input('enter the id : '))
+    f=0
+    for i in user:
+        if i['id']==id:
+            phone=int(input('enter your number : '))
+            password=input('enter new password')
+            i['phone']=phone
+            i['password']=password
+            print('updated')
+            f=1
+    if f==0:
+        print('invalid number..')
+
 # Fuctions end
 
 user=[{'id': 1000, 'name': 'sajan', 'email': 's@','phone': 920712, 'password': 'asdf'}]
@@ -123,7 +137,25 @@ while True:
                 else:
                     print('invalid Choice')
         elif f==2:
-            print('user login')
+            f,u=login()
+            if f==1:
+                while True:
+                    print('''
+                    1.view book
+                    2.update profile
+                    3.Rent a book
+                    4.logout''')
+                    c1=int(input('enter your choice : '))
+                    if c1==1:
+                        view_bk()
+                    elif c1==2:
+                        update_usr()
+                    # elif c1==3:
+                    #     rent()
+                    elif c1==4:
+                        break
+                    else:
+                        print('invalid option')
         else:
             print('invalid username or password')
     elif c==3:
