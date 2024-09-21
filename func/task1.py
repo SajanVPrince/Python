@@ -18,10 +18,10 @@ def register():
         phone=int(input('enter your number : '))
         password=input('enter the password : ')
         print('Registration Succesfull email id is your username')
-        user.append({'id':id,'name':name,'email':email,'phone':phone,'password':password})
+        user.append({'id':id,'name':name,'email':email,'phone':phone,'password':password,'book':[]})
 
 def login():
-    usern=input('Enter Username : ')
+    usern=str(input('Enter Username : '))
     passw=input('Enter password : ')
     f=0
     u=''
@@ -42,7 +42,7 @@ def add_bk():
     name=str(input('enter name : '))
     price=int(input('enter the price : '))
     stock=int(input('enter the stock availible : '))
-    lib.append({'id':id,'name':name,'price':price,'stock':stock})
+    lib.append({'id':id,'name':name,'price':price,'stock':stock,})
 
 def view_bk():
     print('BOOK DETAILS')
@@ -83,23 +83,50 @@ def view_usr():
     for i in user:
         print("{:<10}{:<15}{:<15}{:<15}".format(i['id'],i['name'],i['email'],i['phone']))
 
-def update_usr():
+def view_pro(u):
+    print('NAME : ',u['name'])
+    print('ID : ',u['id'])
+    print('Email : ',u['email'])
+    print('Phone : ',u['phone'])
+    print('Password : ',u['password'])
+    print('Books : ',u['book'])
+
+
+
+def update_usr(u):
+    phone=int(input('enter your number : '))
+    password=input('enter new password')
+    u['phone']=phone
+    u['password']=password
+    print('updated')
+
+def rent(u):
     id=int(input('enter the id : '))
     f=0
-    for i in user:
+    for i in lib:
         if i['id']==id:
-            phone=int(input('enter your number : '))
-            password=input('enter new password')
-            i['phone']=phone
-            i['password']=password
-            print('updated')
             f=1
+            i['stock']-=1
+            u['book'].append(id)
+            print('book added')
     if f==0:
-        print('invalid number..')
+        print('invalid ID')
+
+def return_bk(u):
+    id=int(input('enter the id : '))
+    f=0
+    for i in lib:
+        if i['id']==id and id in u['book']:
+            f=1
+            i['stock']+=1
+            u['book'].remove(id)
+            print('book removed')
+    if f==0:
+        print('invalid ID')
 
 # Fuctions end
 
-user=[{'id': 1000, 'name': 'sajan', 'email': 's@','phone': 920712, 'password': 'asdf'}]
+user=[{'id': 1000, 'name': 'sajan', 'email': 's@','phone': 920712, 'password': 'asdf','book':[1,2]}]
 lib=[{'id': 1, 'name': 'aa', 'price': 20, 'stock': 2},{'id': 2, 'name': 'ab', 'price': 200, 'stock': 2}]
 while True:
     print('''
@@ -137,25 +164,29 @@ while True:
                 else:
                     print('invalid Choice')
         elif f==2:
-            f,u=login()
-            if f==1:
-                while True:
-                    print('''
-                    1.view book
-                    2.update profile
-                    3.Rent a book
-                    4.logout''')
-                    c1=int(input('enter your choice : '))
-                    if c1==1:
-                        view_bk()
-                    elif c1==2:
-                        update_usr()
-                    # elif c1==3:
-                    #     rent()
-                    elif c1==4:
-                        break
-                    else:
-                        print('invalid option')
+            while True:
+                print('''
+                    1.view profile
+                    2.view book
+                    3.update profile
+                    4.Rent a book
+                    5.Return a book
+                    6.logout''')
+                c1=int(input('enter your choice : '))
+                if c1==1:
+                    view_pro(u)
+                elif c1==2:
+                    view_bk()
+                elif c1==3:
+                    update_usr(u)
+                elif c1==4:
+                    rent(u)
+                elif c1==5:
+                    return_bk(u)
+                elif c1==6:
+                    break
+                else:
+                    print('invalid option')
         else:
             print('invalid username or password')
     elif c==3:
