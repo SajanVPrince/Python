@@ -124,6 +124,9 @@ def return_bk(u):
     if f==0:
         print('invalid ID')
 
+def bkhnd(u):
+    print(u['book'])
+
 # Fuctions end
 
 user=[{'id': 1000, 'name': 'sajan', 'email': 's@','phone': 920712, 'password': 'asdf','book':[1,2]}]
@@ -171,7 +174,8 @@ while True:
                     3.update profile
                     4.Rent a book
                     5.Return a book
-                    6.logout''')
+                    6.Books in hand
+                    7.logout''')
                 c1=int(input('enter your choice : '))
                 if c1==1:
                     view_pro(u)
@@ -184,6 +188,8 @@ while True:
                 elif c1==5:
                     return_bk(u)
                 elif c1==6:
+                    bkhnd(u)
+                elif c1==7:
                     break
                 else:
                     print('invalid option')
