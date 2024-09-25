@@ -26,5 +26,17 @@
 
 # 1
 
-l=['hello','welcome','apple','kiwi']
-print(list(filter(lambda x:'e' in x,l)))
+# Filter
+# ------
+
+# l=['hello','welcome','apple','kiwi']
+# print(list(filter(lambda x:'e' in x,l)))
+
+# map
+# ---
+
+# l=[1,2,3,4,5,6,7,8]
+# print(list(map(lambda x:x+10,l)))
+# def num(x):
+#     return x+10
+# print(list(map(num,l)))
