@@ -36,7 +36,7 @@ for i in range(a,b+1):
         s=s+i
 print(s)'''
 
-# task 4 (Multiplication)
+# task 4 (Multiplication Table)
 
 '''a=int(input("Enter the number : "))
 for i in range(1,11):
