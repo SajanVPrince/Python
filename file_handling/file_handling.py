@@ -1,15 +1,15 @@
-# Modes in file handling
-# ----------------------
+''' Modes in file handling
+----------------------
 
-# 1.create(x)
-# 2.read(r)
-# 3.write(w)
-# 4.append(a)
+1.create(x)
+2.read(r)
+3.write(w)
+4.append(a)
 
-# synatx
-# ------
+synatx
+------
 
-# open('file_name','modes')
+open('file_name','modes')'''
 
 # EXAMPLE
 # -------
@@ -19,21 +19,21 @@
 # f.write(' all')
 
 
-# Methods in file handling
-# ------------------------
+''' Methods in file handling
+------------------------
 
-# 1.write
-# 2.read
-# 3.readline
-# 4.readlines
-# 5.seek (to change cursor position)
-# 6.tell (to know where the cursor is)
+1.write
+2.read
+3.readline
+4.readlines
+5.seek (to change cursor position)
+6.tell (to know where the cursor is)'''
 
 # Created a File
 
 # f=open('demo.txt','x')
 
-# File to be readed by using read mode
+'''File to be readed by using read mode'''
 
 # f=open('demo.txt','r')
 
@@ -65,7 +65,7 @@
 
 # READLINES
 # ---------
-# readlines is also used to find how many lines are in a file using len()
+'''readlines is also used to find how many lines are in a file using len()'''
 
 # a=f.readlines()
 # print(a)
@@ -132,22 +132,45 @@
 # WRITE
 # -----
 
-# if already file exists it will over write the content
+'''if already file exists it will over write the content'''
 
-f=open('demo.txt','w')
+# f=open('demo.txt','w')
+
 # f.write('welcome\n')
 # f.write('123\n')
 # f.write('hi '+'hello\n')
 
-# if file doesn't exist it will create a new file and write the content
+'''if file doesn't exist it will create a new file and write the content'''
 
 # f=open('test.txt','w')
 # f.write('welcome\n')
 # f.write('123\n')
 # f.write('hi '+'hello\n')
 
-a=int(input('enter a number : '))
-for i in range(1,11):
-    x=a*i
-    x=str(x)
-    f.write(f"{a} x {i} = {x}\n")
+# Multiplication table to print on a txt file
+# -------------------------------------------
+
+# a=int(input('enter a number : '))
+# for i in range(1,11):
+#     x=a*i
+#     x=str(x)
+#     f.write(f"{a} x {i} = {x}\n")
+
+# multiplication table with a limit
+# --------------------------------- 
+
+# a=int(input('enter the number : '))
+# for i in range(1,11):
+#     for j in range(1,(a+1)):
+#         f.write(f"{i}x{j}={i*j} \t \t")
+#     f.write('\n')
+
+# APPEND
+# ------
+
+'''the coursor point will be at the end of the last data
+it will add data to the existing data and the old datas will not be losed'''
+
+# f=open('test.txt','a')
+# f.write(' welcome')
+
