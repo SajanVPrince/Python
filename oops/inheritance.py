@@ -116,3 +116,82 @@ sanu.exams()
 sanu.notes()
 sanu.result()
 sanu.uniform()'''
+
+#  Hierarchical Inheritance
+# -------------------------
+
+# Where it consist of one parent class and more than one child class
+
+# 1
+
+'''class syn:
+    def python(self):
+        print('python')
+    def php(self):
+        print('php')
+class ntech_staff(syn):
+    def admission(self):
+        print('admission')
+class tech_staff(syn):
+    def python_cls(self):
+        print('python programming')
+
+staff1=ntech_staff()
+staff1.admission()
+staff1.python()
+staff2=tech_staff()
+staff2.python()
+staff2.python_cls()'''
+
+# Hybrid Inheritance
+# ------------------
+
+# Which consist of all type of inheritance which does not have a specific pattern
+
+# 1
+
+'''class syn:
+    def python(self):
+        print('python')
+    def php(self):
+        print('php')
+class ntech_staff(syn):
+    def admission(self):
+        print('admission')
+class tech_staff(syn):
+    def python_cls(self):
+        print('python programming')
+class std(tech_staff):
+    def notes(self):
+        print('notes')
+
+staff1=ntech_staff()
+staff1.admission()
+staff1.python()
+staff2=tech_staff()
+staff2.python()
+staff2.python_cls()
+std1=std()
+std1.notes()
+std1.python_cls()'''
+
+# 2
+
+'''class g_parent():
+    def pocketmoney(self):
+        print('pocketmoney')
+class father(g_parent):
+    def car(self):
+        print('car')
+class mother(g_parent):
+    def shopping(self):
+        print('shopping')
+class child(father,mother):
+    def pets(self):
+        print('pets')
+
+child1=child()
+child1.pets()
+child1.shopping()
+child1.car()
+child1.pocketmoney()'''
