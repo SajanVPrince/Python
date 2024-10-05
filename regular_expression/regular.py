@@ -89,3 +89,10 @@ a='abcd'
 print(re.search('[a-z].+',a))
 print(re.search('[a-z].*',a))
 print(re.search('[a-z].?',a))'''
+
+# print(re.search('[a-z].*[0-9]',a))
+
+a='abcd789'
+# print(re.search('[a-z].*[0-9]',a))
+
+# print(re.search('[a-z].{3}',a))
