@@ -88,3 +88,15 @@ for i in range(1,4):
     l+=1
     print()'''
 
+# A
+# B A
+# C B A 
+# D C B A
+
+'''a=65
+for i in range(1,5):
+    for j in range(i):
+        print(chr(a-j),end=' ')
+    a+=1
+    print()'''
+

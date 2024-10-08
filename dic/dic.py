@@ -1,4 +1,4 @@
-d={'name':'sajan','age':20,'place':'ekm'}
+# d={'name':'sajan','age':20,'place':'ekm'}
 # print(d['age'])
 # for i in d:
 #     print(i,d[i])
@@ -144,11 +144,11 @@ while True:'''
 
 
 
-det=[{'name': 'sajan', 'age': 20},
-    {'name': 'aro', 'age': 32},
-    {'name': 'rosh', 'age': 27},
-    {'name': 'jit', 'age': 38},
-    {'name': 'jib', 'age': 24}]
+# det=[{'name': 'sajan', 'age': 20},
+#     {'name': 'aro', 'age': 32},
+#     {'name': 'rosh', 'age': 27},
+#     {'name': 'jit', 'age': 38},
+#     {'name': 'jib', 'age': 24}]
 
 '''for i in det:
     print(i['age'])
@@ -224,3 +224,11 @@ print(s)'''
 a=str(input('Enter project name : '))
 l[0]['proj'].append(a)
 print(l)'''
+
+# Dictonary value swap
+
+d={1:'one',2:'two'}
+d1={}
+for i in d:
+    d1[d[i]]=i
+print(d1)

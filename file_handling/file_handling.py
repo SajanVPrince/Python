@@ -174,3 +174,20 @@ it will add data to the existing data and the old datas will not be losed'''
 # f=open('test.txt','a')
 # f.write(' welcome')
 
+# create a text file that contains any sentence
+# write a python program that reads the content of the File
+# find and return the longest word in sentence
+
+# f=open('demo.txt','x')
+f=open('demo.txt','r')
+l=f.readlines()
+f.seek(0)
+long=''
+for i in range(len(l)):
+    b=f.readline().strip()
+    c=b.split(' ')
+    for j in c:
+        if j!='':
+            if len(j)>len(long):
+                long=j
+print(long)
